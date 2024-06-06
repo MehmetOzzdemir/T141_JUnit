@@ -19,12 +19,14 @@ public class C05_CheckBox {
 
 
     WebDriver driver;
+
     @BeforeEach
-    public  void setup(){
-        driver=new ChromeDriver();
+    public void setup() {
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
+
     @AfterEach
     public void teardown() throws InterruptedException {
 
@@ -44,9 +46,9 @@ public class C05_CheckBox {
         //Sirt agrisini kutudan,carpintiyi yazidan secelim
 
 
-        WebElement sirtAgrisiChecKBox =driver.findElement(By.xpath("//input[@id='gridCheck5']"));
+        WebElement sirtAgrisiChecKBox = driver.findElement(By.xpath("//input[@id='gridCheck5']"));
         sirtAgrisiChecKBox.click();
-        WebElement carpintiYazisi =driver.findElement(By.xpath("//*[@for='gridCheck4']"));
+        WebElement carpintiYazisi = driver.findElement(By.xpath("//*[@for='gridCheck4']"));
         carpintiYazisi.click();
 
         //c. Sirt Agrisi ve Carpinti checkbox’larininin seçili olduğunu test edin
@@ -62,15 +64,18 @@ public class C05_CheckBox {
 
         //d. Seker ve Epilepsi checkbox’larininin seçili olmadigini test edin
 
+        //seker ve epilepsi kutulari gorunmediginden
+        // driver objesi bu kutulari test EDEMEYEBILIR
+        // bu durumda page down yapmak gerekir
+
         sirtAgrisiChecKBox.sendKeys(Keys.PAGE_DOWN);
 
-        WebElement sekerCheckBox =driver.findElement(By.xpath("//*[@id='hastalikCheck2']"));
+        WebElement sekerCheckBox = driver.findElement(By.xpath("//*[@id='hastalikCheck2']"));
         WebElement epilepsiCheckBox = driver.findElement(By.id("hastalikCheck7"));
 
 
         Assertions.assertFalse(sekerCheckBox.isSelected());
         Assertions.assertFalse(epilepsiCheckBox.isSelected());
-
 
 
     }
