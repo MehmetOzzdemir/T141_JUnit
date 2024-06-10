@@ -47,6 +47,8 @@ public class C03_ReusableMethodsIleKontrolsuzWindowGecisi extends TestBase {
         expectedTitle = "The Internet";
         actualTitle = driver.getTitle();
         Assertions.assertEquals(expectedTitle, actualTitle);
+
+
     }
 
 
