@@ -10,14 +10,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-public class C05_DinamicFileExistTest{
-
-
-
+public class C05_DinamicFileExistTest {
 
 
     @Test
-    public void test(){
+    public void test() {
 
         //masautumuzde karate-logo.png mli birdosya oldugunu test edin
 
@@ -26,7 +23,16 @@ public class C05_DinamicFileExistTest{
 
         Assertions.assertTrue(Files.exists(Paths.get(sourcePath)));
 
+        //Tum bilgisayarlarda tanimli bir dosya yolu vardir
+        //Java bu temel dosya yolunu bize veren bir koda sahiptir
 
+        System.out.println(System.getProperty("user.home")); ///Users/mehmetozdemir
+
+
+        sourcePath = System.getProperty("user.home") + "/Desktop/karate-logo.png";
+
+
+        Assertions.assertTrue(Files.exists(Paths.get(sourcePath)));
 
 
     }
