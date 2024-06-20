@@ -74,11 +74,9 @@ public class C03_FarkliTaglarlaOlusturulanWebTable extends TestBase {
     }
 
     public String rowAndColumn(int row, int column) {
-        String rowAndColumn = driver.findElement(
+        return driver.findElement(
                 By.xpath("//*[@role='rowgroup'][" + row
                         + "]/*[@role='row']/*[@role='gridcell'][" + column + "]")).getText();
 
-
-        return rowAndColumn;
     }
 }
