@@ -22,25 +22,24 @@ public class C03_FarkliTaglarlaOlusturulanWebTable extends TestBase {
 
         // 3. 3.sutunun basligini yazdirin
         System.out.println();
-        System.out.println("3. Header : " + allheadersElements.get(3).getText());
+        System.out.println("3. Header : " + allheadersElements.get(2).getText());
 
         // 4. Tablodaki tum datalari yazdirin
-        WebElement allTableElements =
-                driver.findElement(By.xpath("//*[@class='rt-table']"));
-        System.out.println("All Data : \n " + allTableElements.getText());
+        System.out.println();
+        List<WebElement> allDataElements =
+                driver.findElements(
+                        By.xpath("//*[@role='rowgroup']/*[@role='row']/*[@role='gridcell']"));
+        System.out.println("All Data : " + ReusableMethods.StringListChange(allDataElements));
 
         // 5. Tabloda kac tane bos olmayan cell (data) oldugunu yazdirin
         System.out.println();
-        List<WebElement> allDataElementsList =
-                driver.findElements(
-                        By.xpath("//*[@role='rowgroup']/*[@role='row']/*[@role='gridcell']"));
         int count = 0;
-        for (int i = 0; i < allDataElementsList.size(); i++) {
-            if (!allDataElementsList.get(i).getText().equals(" ")) {
+        for (int i = 0; i < allDataElements.size(); i++) {
+            if (!allDataElements.get(i).getText().isBlank()) {
                 count++;
             }
         }
-        System.out.println("All Data Numbers : " + count);
+        System.out.println("All Not Empty Data Numbers : " + count);
 
         // 6. Tablodaki satir sayisini yazdirin
         System.out.println();
@@ -57,7 +56,7 @@ public class C03_FarkliTaglarlaOlusturulanWebTable extends TestBase {
         System.out.println();
         List<WebElement> thirdColumnElement =
                 driver.findElements(
-                         By.xpath("//*[@role='rowgroup']/*[@role='row']/*[@role='gridcell'][3]"));
+                        By.xpath("//*[@role='rowgroup']/*[@role='row']/*[@role='gridcell'][3]"));
 
         System.out.println("3. Column : " + ReusableMethods.StringListChange(thirdColumnElement));
 
@@ -67,9 +66,9 @@ public class C03_FarkliTaglarlaOlusturulanWebTable extends TestBase {
 
         // 10. Tabloda "First Name" i Kierra olan kisinin Salary'sini yazdirin
         System.out.println();
-        for (int i = 1; i <=allRowNumbers.size() ; i++) {
-            if (rowAndColumn(i,1).equals("Kierra")){
-                System.out.println(rowAndColumn(i,1)+"'s Salary : "+rowAndColumn(i,5));
+        for (int i = 1; i <= allRowNumbers.size(); i++) {
+            if (rowAndColumn(i, 1).equals("Kierra")) {
+                System.out.println(rowAndColumn(i, 1) + "'s Salary : " + rowAndColumn(i, 5));
             }
         }
     }
