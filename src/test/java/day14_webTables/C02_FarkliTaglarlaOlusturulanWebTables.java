@@ -71,7 +71,7 @@ public class C02_FarkliTaglarlaOlusturulanWebTables extends TestBase {
         System.out.println("istenen Data : "+rowAndColumnData(3, 2));
 
         // 10. Tabloda " Category" si Furniture olan urunun fiyatini yazdirin
-        for (int i = 1; i < allRowNumbers.size(); i++) {
+        for (int i = 1; i <=allRowNumbers.size(); i++) {
             if (rowAndColumnData(i, 2).equals("Furniture")) {
                 System.out.println("Data Furniture Price : " + rowAndColumnData(i, 3));
             }

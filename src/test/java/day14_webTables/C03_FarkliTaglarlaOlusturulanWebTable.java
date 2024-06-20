@@ -67,7 +67,7 @@ public class C03_FarkliTaglarlaOlusturulanWebTable extends TestBase {
 
         // 10. Tabloda "First Name" i Kierra olan kisinin Salary'sini yazdirin
         System.out.println();
-        for (int i = 1; i <allRowNumbers.size() ; i++) {
+        for (int i = 1; i <=allRowNumbers.size() ; i++) {
             if (rowAndColumn(i,1).equals("Kierra")){
                 System.out.println(rowAndColumn(i,1)+"'s Salary : "+rowAndColumn(i,5));
             }
