@@ -10,7 +10,7 @@ import utilities.TestBase;
 
 import java.io.IOException;
 
-public class C04_istenenELementScreenshot extends TestBase {
+public class C04_IstenenELementScreenshot extends TestBase {
 
 
     @Test

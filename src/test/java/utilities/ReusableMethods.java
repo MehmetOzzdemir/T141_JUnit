@@ -64,7 +64,7 @@ public class ReusableMethods extends TestBase{
         FileUtils.copyFile(geciciDosya,allPageScreenshot);
 
     }
-    public static void allPagescreenshot(String reportName) throws IOException {
+    public static void allPageScreenshot(String reportName) throws IOException {
         TakesScreenshot tss = (TakesScreenshot) driver;
         String screenshotPath="target/screenshots";
         File allPageScreenshot = new File(screenshotPath+"/"+reportName+".png");
