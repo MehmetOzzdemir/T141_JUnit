@@ -1,4 +1,4 @@
-package day16_getScreenShot;
+package day16_getScreenshot;
 
 import org.apache.poi.ss.usermodel.*;
 import org.junit.jupiter.api.Test;

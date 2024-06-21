@@ -1,16 +1,13 @@
-package day16_getScreenShot;
+package day16_getScreenshot;
 
-import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import utilities.ReusableMethods;
 import utilities.TestBase;
 
-import java.io.File;
 import java.io.IOException;
 
 public class C04_istenenELementScreenshot extends TestBase {

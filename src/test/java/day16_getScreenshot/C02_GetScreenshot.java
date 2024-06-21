@@ -1,4 +1,4 @@
-package day16_getScreenShot;
+package day16_getScreenshot;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Assertions;

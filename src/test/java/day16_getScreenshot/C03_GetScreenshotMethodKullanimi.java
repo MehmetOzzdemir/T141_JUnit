@@ -1,6 +1,5 @@
-package day16_getScreenShot;
+package day16_getScreenshot;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
