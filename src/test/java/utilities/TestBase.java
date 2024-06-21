@@ -15,7 +15,7 @@ import java.util.List;
 
 public class TestBase {
 
-    protected WebDriver driver;
+    protected static WebDriver driver;
 
     @BeforeEach
     public void setup() {
